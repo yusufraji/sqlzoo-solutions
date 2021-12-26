@@ -4,6 +4,7 @@ Here are my solutions to SQL tutorials from
 
 ## Sections
 7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
+8. [using NULL](#using-null) - In which we look at teachers in departments.
     
 ## More JOIN
 
@@ -62,4 +63,14 @@ WHERE  NAME != 'Art Garfunkel'
                               JOIN actor
                                 ON ( actorid = actor.id )
                        WHERE  NAME = 'Art Garfunkel')  
+```
+
+## Using NULL
+
+1. List the teachers who have NULL for their department.
+
+```sql
+SELECT NAME
+FROM   teacher
+WHERE  dept IS NULL
 ```
