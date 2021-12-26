@@ -84,3 +84,13 @@ FROM   teacher
        INNER JOIN dept
                ON ( teacher.dept = dept.id )
 ```
+
+3. Use a different JOIN so that all teachers are listed.
+
+```sql
+SELECT teacher.NAME,
+       dept.NAME
+FROM   teacher
+       LEFT JOIN dept
+              ON ( teacher.dept = dept.id )
+```
