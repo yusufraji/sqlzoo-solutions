@@ -10,7 +10,7 @@ Here are my solutions to SQL tutorials from
 
 12. Lead actor in Julie Andrews movies
 ```sql
- SELECT title,
+SELECT title,
        NAME
 FROM   movie
        JOIN casting
@@ -51,7 +51,7 @@ ORDER  BY Count(actorid) DESC
 
 15. List all the people who have worked with 'Art Garfunkel'.
 ```sql
- SELECT DISTINCT( NAME )
+SELECT DISTINCT( NAME )
 FROM   casting
        JOIN actor
          ON ( actorid = actor.id )
@@ -73,4 +73,14 @@ WHERE  NAME != 'Art Garfunkel'
 SELECT NAME
 FROM   teacher
 WHERE  dept IS NULL
+```
+
+2. Note the INNER JOIN misses the teachers with no department and the departments with no teacher. 
+
+```sql
+SELECT teacher.NAME,
+       dept.NAME
+FROM   teacher
+       INNER JOIN dept
+               ON ( teacher.dept = dept.id )
 ```
