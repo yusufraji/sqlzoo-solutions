@@ -36,7 +36,7 @@ HAVING ( Count(movieid) >= 15 )
 ORDER  BY NAME 
 ```
 
-14.  List the films released in the year 1978 ordered by the number of actors in the cast, then by title.
+14. List the films released in the year 1978 ordered by the number of actors in the cast, then by title.
 ```sql
 SELECT title,
        Count(actorid)
@@ -46,4 +46,20 @@ FROM   movie
 WHERE  yr = 1978
 GROUP  BY title
 ORDER  BY Count(actorid) DESC  
+```
+
+15. List all the people who have worked with 'Art Garfunkel'.
+```sql
+ SELECT DISTINCT( NAME )
+FROM   casting
+       JOIN actor
+         ON ( actorid = actor.id )
+WHERE  NAME != 'Art Garfunkel'
+       AND movieid IN (SELECT movieid
+                       FROM   movie
+                              JOIN casting
+                                ON ( movie.id = movieid )
+                              JOIN actor
+                                ON ( actorid = actor.id )
+                       WHERE  NAME = 'Art Garfunkel')  
 ```
