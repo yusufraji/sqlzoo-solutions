@@ -105,7 +105,7 @@ FROM   teacher
                ON ( teacher.dept = dept.id )
 ```
 
-5. Use the COALESCE function and a LEFT JOIN to print the teacher **name** and department name. Use the string 'None' where there is no department.
+6. Use the COALESCE function and a LEFT JOIN to print the teacher **name** and department name. Use the string 'None' where there is no department.
 
 ```sql
 SELECT teacher.NAME,
@@ -115,7 +115,7 @@ FROM   teacher
               ON ( teacher.dept = dept.id )
 ```
 
-6. Use COUNT to show the number of teachers and the number of mobile phones.
+7. Use COUNT to show the number of teachers and the number of mobile phones.
 
 ```sql
 SELECT Count(teacher.NAME),
@@ -125,7 +125,7 @@ FROM   teacher
               ON ( teacher.dept = dept.id )
 ```
 
-7. Use COUNT and GROUP BY **dept.name** to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
+8. Use COUNT and GROUP BY **dept.name** to show each department and the number of staff. Use a RIGHT JOIN to ensure that the Engineering department is listed.
 
 ```sql
 SELECT dept.NAME,
