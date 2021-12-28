@@ -114,3 +114,13 @@ FROM   teacher
        LEFT JOIN dept
               ON ( teacher.dept = dept.id )
 ```
+
+6. Use COUNT to show the number of teachers and the number of mobile phones.
+
+```sql
+SELECT Count(teacher.NAME),
+       Count(mobile)
+FROM   teacher
+       LEFT JOIN dept
+              ON ( teacher.dept = dept.id )
+```
