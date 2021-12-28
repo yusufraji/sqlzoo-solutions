@@ -94,6 +94,7 @@ FROM   teacher
        LEFT JOIN dept
               ON ( teacher.dept = dept.id )
 ```
+
 4. Use a different JOIN so that all departments are listed.
 
 ```sql
@@ -102,4 +103,14 @@ SELECT teacher.NAME,
 FROM   teacher
        RIGHT JOIN dept
                ON ( teacher.dept = dept.id )
+```
+
+5. Use the COALESCE function and a LEFT JOIN to print the teacher **name** and department name. Use the string 'None' where there is no department.
+
+```sql
+SELECT teacher.NAME,
+       COALESCE(dept.NAME, 'None')
+FROM   teacher
+       LEFT JOIN dept
+              ON ( teacher.dept = dept.id )
 ```
