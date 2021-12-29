@@ -186,3 +186,15 @@ SELECT id
 FROM   stops
 WHERE  NAME = 'Craiglockhart'
 ```
+
+3. Give the **id** and the **name** for the **stops** on the '4' 'LRT' service.
+
+```sql
+SELECT id,
+       NAME
+FROM   stops
+       JOIN route
+         ON ( stops.id = route.stop )
+WHERE  company = 'LRT'
+       AND num = '4'
+```
