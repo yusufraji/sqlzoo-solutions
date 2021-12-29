@@ -5,6 +5,7 @@ Here are my solutions to SQL tutorials from
 ## Sections
 7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
 8. [using NULL](#using-null) - In which we look at teachers in departments.
+9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
 ## More JOIN
 
@@ -167,4 +168,13 @@ SELECT teacher.NAME,
            ELSE 'None'
          END )
 FROM   teacher
+```
+
+## Self join
+
+1. How many **stops** are in the database.
+
+```sql
+SELECT Count (DISTINCT id)
+FROM   stops
 ```
