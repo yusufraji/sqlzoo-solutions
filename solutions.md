@@ -178,3 +178,11 @@ FROM   teacher
 SELECT Count (DISTINCT id)
 FROM   stops
 ```
+
+2. Find the **id** value for the stop 'Craiglockhart'
+
+```sql
+SELECT id
+FROM   stops
+WHERE  NAME = 'Craiglockhart'
+```
