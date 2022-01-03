@@ -246,3 +246,16 @@ FROM   route a
 WHERE  stopa.NAME = 'Craiglockhart'
        AND stopb.NAME = 'London Road'
 ```
+
+7. Give a list of all the services which connect stops 115 and 137 ('Haymarket' and 'Leith')
+
+```sql
+SELECT DISTINCT r1.company,
+                r1.num
+FROM   route r1,
+       route r2
+WHERE  r1.num = r2.num
+       AND r1.company = r2.company
+       AND r1.stop = 115
+       AND r2.stop = 137
+```
