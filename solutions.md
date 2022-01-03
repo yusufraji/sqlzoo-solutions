@@ -259,3 +259,20 @@ WHERE  r1.num = r2.num
        AND r1.stop = 115
        AND r2.stop = 137
 ```
+
+8. Give a list of the services which connect the **stops** 'Craiglockhart' and 'Tollcross'
+
+```sql
+SELECT DISTINCT r1.company,
+                r1.num
+FROM   route r1,
+       route r2,
+       stops s1,
+       stops s2
+WHERE  r1.num = r2.num
+       AND r1.company = r2.company
+       AND r1.stop = s1.id
+       AND r2.stop = s2.id
+       AND s1.NAME = 'Craiglockhart'
+       AND s2.NAME = 'Tollcross'
+```
