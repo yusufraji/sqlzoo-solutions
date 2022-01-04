@@ -276,3 +276,20 @@ WHERE  r1.num = r2.num
        AND s1.NAME = 'Craiglockhart'
        AND s2.NAME = 'Tollcross'
 ```
+
+9. Give a distinct list of the **stops** which may be reached from 'Craiglockhart' by taking one bus, including 'Craiglockhart' itself, offered by the LRT company. Include the company and bus no. of the relevant services.
+
+```sql
+SELECT DISTINCT s2.NAME,
+                r2.company,
+                r2.num
+FROM   route r1,
+       route r2,
+       stops s1,
+       stops s2
+WHERE  r1.num = r2.num
+       AND r1.company = r2.company
+       AND r1.stop = s1.id
+       AND r2.stop = s2.id
+       AND s1.NAME = 'Craiglockhart'
+```
