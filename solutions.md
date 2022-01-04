@@ -3,10 +3,24 @@ Here are my solutions to SQL tutorials from
 [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections
+6. [JOIN](#join) - In which we join two tables; game and goals.
 7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
+## JOIN
+
+1. The first example shows the goal scored by a player with the last name 'Bender'. The `*` says to list all the columns in the table - a shorter way of saying `matchid, teamid, player, gtime`
+**Modify it to show the matchid and player name for all goals scored by Germany.
+To identify German players, check for: `teamid = 'GER'`**
+
+```sql
+SELECT matchid,
+       player
+FROM   goal
+WHERE  teamid = 'GER'
+```
+
 ## More JOIN
 
 12. Lead actor in Julie Andrews movies
