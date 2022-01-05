@@ -106,6 +106,16 @@ FROM   game
 WHERE  coach = 'Fernando Santos'
 ```
 
+7. **List the player for every goal scored in a game where the stadium was 'National Stadium, Warsaw'**
+
+```sql
+SELECT player
+FROM   game
+       JOIN goal
+         ON ( id = matchid )
+WHERE  stadium = 'National Stadium, Warsaw'
+```
+
 ## More JOIN
 
 12. Lead actor in Julie Andrews movies
