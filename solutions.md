@@ -167,6 +167,20 @@ GROUP  BY matchid,
           mdate
 ```
 
+12. **For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'**
+
+```sql
+SELECT matchid,
+       mdate,
+       Count(teamid)
+FROM   game
+       JOIN goal
+         ON id = matchid
+WHERE  ( teamid = 'GER' )
+GROUP  BY matchid,
+          mdate
+```
+
 ## More JOIN
 
 12. Lead actor in Julie Andrews movies
