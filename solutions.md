@@ -141,6 +141,17 @@ FROM   eteam
 GROUP  BY teamname
 ```
 
+10. **Show the stadium and the number of goals scored in each stadium.**
+
+```sql
+SELECT stadium,
+       Count(stadium)
+FROM   game
+       JOIN goal
+         ON id = matchid
+GROUP  BY stadium
+```
+
 ## More JOIN
 
 12. Lead actor in Julie Andrews movies
