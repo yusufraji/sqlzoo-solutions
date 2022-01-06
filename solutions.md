@@ -152,6 +152,21 @@ FROM   game
 GROUP  BY stadium
 ```
 
+11. **For every match involving 'POL', show the matchid, date and the number of goals scored.**
+
+```sql
+SELECT matchid,
+       mdate,
+       Count(teamid)
+FROM   game
+       JOIN goal
+         ON matchid = id
+WHERE  ( team1 = 'POL'
+          OR team2 = 'POL' )
+GROUP  BY matchid,
+          mdate
+```
+
 ## More JOIN
 
 12. Lead actor in Julie Andrews movies
