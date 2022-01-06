@@ -130,6 +130,17 @@ WHERE  ( team1 = 'GER'
        AND teamid != 'GER'
 ```
 
+9. **Show teamname and the total number of goals scored.**
+
+```sql
+SELECT teamname,
+       Count(teamname)
+FROM   eteam
+       JOIN goal
+         ON id = teamid
+GROUP  BY teamname
+```
+
 ## More JOIN
 
 12. Lead actor in Julie Andrews movies
