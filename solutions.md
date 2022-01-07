@@ -33,6 +33,14 @@ FROM   world
 WHERE  continent = 'Africa'
 ```
 
+4. How many countries have an **area** of at least 1000000 
+
+```sql
+SELECT Count(NAME)
+FROM   world
+WHERE  area > '1000000'
+```
+
 ## JOIN
 
 1. The first example shows the goal scored by a player with the last name 'Bender'. The `*` says to list all the columns in the table - a shorter way of saying `matchid, teamid, player, gtime`
