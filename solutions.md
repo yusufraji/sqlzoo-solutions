@@ -25,6 +25,14 @@ SELECT DISTINCT continent
 FROM   world
 ```
 
+3. Give the total GDP of Africa 
+
+```sql
+SELECT Sum (gdp)
+FROM   world
+WHERE  continent = 'Africa'
+```
+
 ## JOIN
 
 1. The first example shows the goal scored by a player with the last name 'Bender'. The `*` says to list all the columns in the table - a shorter way of saying `matchid, teamid, player, gtime`
