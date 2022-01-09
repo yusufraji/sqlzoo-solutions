@@ -3,12 +3,25 @@ Here are my solutions to SQL tutorials from
 [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections
+4. [SELECT within SELECT](#select-within-select) - Additional practice of the basic features using a table of Nobel Prize winners. 
 5. [SUM and COUNT](#sum-and-count) - In which we apply aggregate functions.
 6. [JOIN](#join) - In which we join two tables; game and goals.
 7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
+## SELECT within SELECT
+
+1. **List each country name where the population is larger than that of 'Russia'.**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  population > (SELECT population
+                     FROM   world
+                     WHERE  NAME = 'Russia')
+```
+
 ## SUM and COUNT
 
 1. Show the total **population** of the world. 
