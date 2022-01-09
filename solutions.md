@@ -68,6 +68,15 @@ WHERE  population >= 10000000
 GROUP  BY continent
 ```
 
+8. List the continents that **have** a total population of at least 100 million.
+
+```sql
+SELECT continent
+FROM   world
+GROUP  BY continent
+HAVING Sum(population) >= 100000000
+```
+
 ## JOIN
 
 1. The first example shows the goal scored by a player with the last name 'Bender'. The `*` says to list all the columns in the table - a shorter way of saying `matchid, teamid, player, gtime`
