@@ -49,6 +49,15 @@ FROM   world
 WHERE  NAME IN ( 'Estonia', 'Latvia', 'Lithuania' )
 ```
 
+6. For each **continent** show the **continent** and number of countries.
+
+```sql
+SELECT continent,
+       Count(NAME)
+FROM   world
+GROUP  BY continent
+```
+
 ## JOIN
 
 1. The first example shows the goal scored by a player with the last name 'Bender'. The `*` says to list all the columns in the table - a shorter way of saying `matchid, teamid, player, gtime`
