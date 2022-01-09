@@ -47,6 +47,20 @@ WHERE  continent IN ( (SELECT continent
 ORDER  BY NAME
 ```
 
+4. **Which country has a population that is more than Canada but less than Poland? Show the name and the population.**
+
+```sql
+SELECT NAME,
+       population
+FROM   world
+WHERE  population > (SELECT population
+                     FROM   world
+                     WHERE  NAME = 'Canada')
+       AND population < (SELECT population
+                         FROM   world
+                         WHERE  NAME = 'Poland')
+```
+
 ## SUM and COUNT
 
 1. Show the total **population** of the world. 
