@@ -58,6 +58,16 @@ FROM   world
 GROUP  BY continent
 ```
 
+7. For each **continent** show the **continent** and number of countries with populations of at least 10 million.
+
+```sql
+SELECT continent,
+       Count(NAME)
+FROM   world
+WHERE  population >= 10000000
+GROUP  BY continent
+```
+
 ## JOIN
 
 1. The first example shows the goal scored by a player with the last name 'Bender'. The `*` says to list all the columns in the table - a shorter way of saying `matchid, teamid, player, gtime`
