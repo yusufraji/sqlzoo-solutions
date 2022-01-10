@@ -85,6 +85,19 @@ WHERE  gdp > ALL (SELECT gdp
                          AND gdp > 0)
 ```
 
+7. **Find the largest country (by area) in each continent, show the continent, the name and the area:**
+
+```sql
+SELECT continent,
+       NAME,
+       area
+FROM   world x
+WHERE  area >= ALL (SELECT area
+                    FROM   world y
+                    WHERE  y.continent = x.continent
+                           AND area > 0)
+```
+
 ## SUM and COUNT
 
 1. Show the total **population** of the world. 
