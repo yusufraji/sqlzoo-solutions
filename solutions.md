@@ -98,6 +98,17 @@ WHERE  area >= ALL (SELECT area
                            AND area > 0)
 ```
 
+8. **List each continent and the name of the country that comes first alphabetically.**
+
+```sql
+SELECT continent,
+       NAME
+FROM   world x
+WHERE  x.NAME <= ALL (SELECT NAME
+                      FROM   world y
+                      WHERE  x.continent = y.continent)
+```
+
 ## SUM and COUNT
 
 1. Show the total **population** of the world. 
