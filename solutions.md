@@ -122,6 +122,18 @@ WHERE  25000000 >= ALL (SELECT population
                                AND y.population > 0)
 ```
 
+10. **Some countries have populations more than three times that of all of their neighbours (in the same continent). Give the countries and continents.**
+
+```sql
+SELECT NAME,
+       continent
+FROM   world x
+WHERE  population > ALL (SELECT population * 3
+                         FROM   world y
+                         WHERE  x.continent = y.continent
+                                AND x.NAME != y.NAME)
+```
+
 ## SUM and COUNT
 
 1. Show the total **population** of the world. 
