@@ -3,13 +3,26 @@ Here are my solutions to SQL tutorials from
 [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections
-4. [SELECT within SELECT](#select-within-select) - Additional practice of the basic features using a table of Nobel Prize winners. 
+3. [SELECT from Nobel](#select-from-nobel) - Additional practice of the basic features using a table of Nobel Prize winners.
+4. [SELECT within SELECT](#select-within-select) - In which we form queries using other queries. 
 5. [SUM and COUNT](#sum-and-count) - In which we apply aggregate functions.
 6. [JOIN](#join) - In which we join two tables; game and goals.
 7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
+## SELECT from Nobel
+
+1. Change the query shown so that it displays Nobel prizes for 1950.
+
+```sql
+SELECT yr,
+       subject,
+       winner
+FROM   nobel
+WHERE  yr = 1950
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
