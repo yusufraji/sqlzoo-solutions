@@ -23,6 +23,15 @@ FROM   nobel
 WHERE  yr = 1950
 ```
 
+2. Show who won the 1962 prize for Literature.
+
+```sql
+SELECT winner
+FROM   nobel
+WHERE  yr = 1962
+       AND subject = 'Literature'
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
