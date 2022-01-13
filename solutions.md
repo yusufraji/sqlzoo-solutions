@@ -82,6 +82,17 @@ FROM   nobel
 WHERE  winner LIKE 'John%'
 ```
 
+8. **Show the year, subject, and name of Physics winners for 1980 together with the Chemistry winners for 1984.**
+
+```sql
+SELECT *
+FROM   nobel
+WHERE  ( subject = 'Chemistry'
+         AND yr = 1984 )
+        OR ( subject = 'Physics'
+             AND yr = 1980 )
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
