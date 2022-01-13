@@ -74,6 +74,14 @@ WHERE  winner IN ( 'Theodore Roosevelt', 'Woodrow Wilson', 'Jimmy Carter',
                    'Barack Obama' )
 ```
 
+7. Show the winners with first name John
+
+```sql
+SELECT winner
+FROM   nobel
+WHERE  winner LIKE 'John%'
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
