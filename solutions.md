@@ -60,6 +60,20 @@ WHERE  subject = 'Literature'
        AND yr <= 1989
 ```
 
+6. Show all details of the presidential winners:
+
+    * Theodore Roosevelt
+    * Woodrow Wilson
+    * Jimmy Carter
+    * Barack Obama
+
+```sql
+SELECT *
+FROM   nobel
+WHERE  winner IN ( 'Theodore Roosevelt', 'Woodrow Wilson', 'Jimmy Carter',
+                   'Barack Obama' )
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
