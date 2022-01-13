@@ -32,6 +32,15 @@ WHERE  yr = 1962
        AND subject = 'Literature'
 ```
 
+3. Show the year and subject that won 'Albert Einstein' his prize.
+
+```sql
+SELECT yr,
+       subject
+FROM   nobel
+WHERE  winner = 'Albert Einstein'
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
