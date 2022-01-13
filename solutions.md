@@ -93,6 +93,15 @@ WHERE  ( subject = 'Chemistry'
              AND yr = 1980 )
 ```
 
+9. **Show the year, subject, and name of winners for 1980 excluding Chemistry and Medicine**
+
+```sql
+SELECT *
+FROM   nobel
+WHERE  yr = 1980
+       AND subject NOT IN ( 'Chemistry', 'Medicine' )
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
