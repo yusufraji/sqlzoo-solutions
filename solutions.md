@@ -121,6 +121,14 @@ FROM   nobel
 WHERE  winner = 'Peter Grünberg'
 ```
 
+12. Find all details of the prize won by EUGENE O'NEILL
+
+```sql
+SELECT *
+FROM   nobel
+WHERE  winner = 'Eugene O''Neill'
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
