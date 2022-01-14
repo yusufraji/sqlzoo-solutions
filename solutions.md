@@ -129,6 +129,21 @@ FROM   nobel
 WHERE  winner = 'Eugene O''Neill'
 ```
 
+13. Knights in order
+
+    **List the winners, year and subject where the winner starts with Sir. Show
+    the the most recent first, then by name order.**
+
+```sql
+SELECT winner,
+       yr,
+       subject
+FROM   nobel
+WHERE  winner LIKE 'Sir%'
+ORDER  BY yr DESC,
+          winner
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
