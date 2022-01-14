@@ -113,6 +113,14 @@ WHERE  ( subject = 'Medicine'
              AND yr >= 2004 )
 ```
 
+11. Find all details of the prize won by PETER GRÜNBERG
+
+```sql
+SELECT *
+FROM   nobel
+WHERE  winner = 'Peter Grünberg'
+```
+
 ## SELECT within SELECT
 
 1. **List each country name where the population is larger than that of 'Russia'.**
