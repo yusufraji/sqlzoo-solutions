@@ -31,6 +31,15 @@ FROM   world
 WHERE  population >= 200000000
 ```
 
+3. Give the `name` and the **per capita GDP** for those countries with a `population` of at least 200 million. 
+
+```sql
+SELECT NAME,
+       gdp / population
+FROM   world
+WHERE  population >= 200000000
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
