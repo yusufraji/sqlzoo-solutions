@@ -3,6 +3,7 @@ Here are my solutions to SQL tutorials from
 [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections
+2. [SELECT from World](#select-from-world) - In which we query the World country profile table.
 3. [SELECT from Nobel](#select-from-nobel) - Additional practice of the basic features using a table of Nobel Prize winners.
 4. [SELECT within SELECT](#select-within-select) - In which we form queries using other queries. 
 5. [SUM and COUNT](#sum-and-count) - In which we apply aggregate functions.
@@ -11,6 +12,17 @@ Here are my solutions to SQL tutorials from
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
+## SELECT from World
+
+1. Observe the result of running this SQL command to show the name, continent and population of all countries.
+
+```sql
+SELECT NAME,
+       continent,
+       population
+FROM   world
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
