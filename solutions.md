@@ -51,6 +51,15 @@ FROM   world
 WHERE  continent = 'South America'
 ```
 
+5. Show the `name` and `population` for France, Germany, Italy
+
+```sql
+SELECT NAME,
+       population
+FROM   world
+WHERE  NAME IN ( 'France', 'Germany', 'Italy' )
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
