@@ -40,6 +40,17 @@ FROM   world
 WHERE  population >= 200000000
 ```
 
+4. Show the `name` and `population` in millions for the countries of the
+   `continent` 'South America'. Divide the population by 1000000 to get
+   population in millions.
+
+```sql
+SELECT NAME,
+       population / 1000000
+FROM   world
+WHERE  continent = 'South America'
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
