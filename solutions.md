@@ -23,6 +23,14 @@ SELECT NAME,
 FROM   world
 ```
 
+2. Show the name for the countries that have a population of at least 200 million. 200 million is 200000000, there are eight zeros.
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  population >= 200000000
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
