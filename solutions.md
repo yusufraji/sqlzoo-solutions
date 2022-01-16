@@ -100,6 +100,21 @@ FROM   world
 WHERE  area > 3000000 XOR population > 250000000
 ```
 
+9. Show the `name` and `population` in millions and the GDP in billions for the
+   countries of the `continent` 'South America'. Use the ROUND function to show
+   the values to two decimal places.
+
+   **For South America show population in millions and GDP in billions both to 2
+   decimal places.**
+   
+```sql
+SELECT NAME,
+       Round(population / 1000000, 2),
+       Round(gdp / 1000000000, 2)
+FROM   world
+WHERE  continent = 'South America'
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
