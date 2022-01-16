@@ -68,6 +68,20 @@ FROM   world
 WHERE  NAME LIKE 'United%'
 ```
 
+7. Two ways to be big: A country is **big** if it has an area of more than 3 million sq km or it has a population of more than 250 million.
+
+    **Show the countries that are big by area or big by population. Show name,
+    population and area.**
+
+```sql
+SELECT NAME,
+       population,
+       area
+FROM   world
+WHERE  area > 3000000
+        OR population > 250000000
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
