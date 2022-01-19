@@ -3,6 +3,7 @@ Here are my solutions to SQL tutorials from
 [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections
+1. [SELECT name](#selct-name) - Some pattern matching queries
 2. [SELECT from World](#select-from-world) - In which we query the World country profile table.
 3. [SELECT from Nobel](#select-from-nobel) - Additional practice of the basic features using a table of Nobel Prize winners.
 4. [SELECT within SELECT](#select-within-select) - In which we form queries using other queries. 
@@ -12,6 +13,19 @@ Here are my solutions to SQL tutorials from
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
+## SELECT name
+1. You can use `WHERE name LIKE 'B%'` to find the countries that start with "B".
+
+    * The % is a _wild-card_ it can match any characters
+
+   **Find the country that start with Y**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE 'Y%'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
