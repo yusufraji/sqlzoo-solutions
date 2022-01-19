@@ -33,6 +33,17 @@ SELECT NAME
 FROM   world
 WHERE  NAME LIKE '%y'
 ```
+
+3. Luxembourg has an **x** - so does one other country. List them both.
+
+   **Find the countries that contain the letter x**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%x%'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
