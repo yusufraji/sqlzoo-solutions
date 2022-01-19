@@ -65,6 +65,16 @@ WHERE  NAME LIKE 'C%'
        AND NAME LIKE '%ia'
 ```
 
+6. Greece has a double **e** - who has a double **o**?
+
+   **Find the country that has oo in the name**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%oo%'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
