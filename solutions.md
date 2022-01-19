@@ -26,6 +26,13 @@ FROM   world
 WHERE  NAME LIKE 'Y%'
 ```
 
+2. **Find the countries that end with y**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%y'
+```
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
