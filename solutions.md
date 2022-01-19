@@ -44,6 +44,16 @@ FROM   world
 WHERE  NAME LIKE '%x%'
 ```
 
+4. Iceland, Switzerland end with **land** - but are there others?
+
+   **Find the countries that end with land**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%land'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
