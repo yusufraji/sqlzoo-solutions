@@ -159,6 +159,28 @@ WHERE  LEFT(NAME, 1) = LEFT(capital, 1)
        AND ( capital <> NAME )
 ```
 
+13. **Equatorial Guinea** and **Dominican Republic** have all of the vowels (a e i o u)
+    in the name. They don't count because they have more than one word in the
+    name. 
+
+    **Find the country that has all the vowels and no spaces in its name.**
+
+    * You can use the phrase `name NOT LIKE '%a%'` to exclude characters from your
+      results.
+    * The query shown misses countries like Bahamas and Belarus because they
+      contain at least one 'a'
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%a%'
+       AND NAME LIKE '%e%'
+       AND NAME LIKE '%i%'
+       AND NAME LIKE '%o%'
+       AND NAME LIKE '%u%'
+       AND NAME NOT LIKE '% %'
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
