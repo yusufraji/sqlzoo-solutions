@@ -143,6 +143,22 @@ FROM   world
 WHERE  Length(NAME) = Length(capital)
 ```
 
+12. The capital of Sweden is Stockholm. Both words start with the letter 'S'.
+    
+    **Show the name and the capital where the first letters of each match. Don't
+    include countries where the name and the capital are the same word.**
+
+    * You can use the function LEFT to isolate the first character.
+    * You can use <> as the NOT EQUALS operator.
+
+```sql
+SELECT NAME,
+       capital
+FROM   world
+WHERE  LEFT(NAME, 1) = LEFT(capital, 1)
+       AND ( capital <> NAME )
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
