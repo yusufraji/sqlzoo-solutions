@@ -54,6 +54,17 @@ FROM   world
 WHERE  NAME LIKE '%land'
 ```
 
+5. Columbia starts with a **C** and ends with **ia** - there are two more like this.
+
+   **Find the countries that start with C and end with ia**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE 'C%'
+       AND NAME LIKE '%ia'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
