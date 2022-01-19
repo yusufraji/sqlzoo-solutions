@@ -128,6 +128,21 @@ FROM   world
 WHERE  gdp >= 1000000000000
 ```
 
+11. Greece has capital Athens.
+
+    Each of the strings 'Greece', and 'Athens' has 6 characters.
+
+    **Show the name and capital where the name and the capital have the same number of characters.**
+
+    * You can use the LENGTH function to find the number of characters in a string
+
+```sql
+SELECT NAME,
+       capital
+FROM   world
+WHERE  Length(NAME) = Length(capital)
+```
+
 ## SELECT from Nobel
 
 1. Change the query shown so that it displays Nobel prizes for 1950.
