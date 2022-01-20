@@ -75,6 +75,16 @@ FROM   world
 WHERE  NAME LIKE '%oo%'
 ```
 
+7. Bahamas has three **a** - who else?
+
+    **Find the countries that have three or more a in the name**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%a%a%a%'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
