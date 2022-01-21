@@ -132,6 +132,17 @@ FROM   world
 WHERE  NAME = capital
 ```
 
+12. The capital of **Mexico** is **Mexico** City. Show all the countries where the
+    capital has the country together with the word "City". 
+
+    **Find the country where the capital is the country plus "City".**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  capital = Concat(NAME, ' City')
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
