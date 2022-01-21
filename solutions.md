@@ -101,6 +101,16 @@ WHERE  NAME LIKE '_t%'
 ORDER  BY NAME
 ```
 
+9. Les**o**th**o** and M**o**ld**o**va both have two o characters separated by two other characters.
+
+   **Find the countries that have two "o" characters separated by two others.**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '%o__o%'
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
