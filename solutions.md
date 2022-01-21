@@ -85,6 +85,22 @@ FROM   world
 WHERE  NAME LIKE '%a%a%a%'
 ```
 
+8. India and Angola have an n as the second character. You can use the
+   underscore as a single character wildcard. 
+
+   ```sql
+   SELECT name FROM world
+    WHERE name LIKE '_n%'
+   ORDER BY name
+   ```
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME LIKE '_t%'
+ORDER  BY NAME
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
