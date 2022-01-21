@@ -121,6 +121,17 @@ FROM   world
 WHERE  Length(NAME) = 4
 ```
 
+11. The capital of **Luxembourg** is **Luxembourg**. Show all the countries where the
+    capital is the same as the name of the country 
+
+    **Find the country where the name is the capital city.**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  NAME = capital
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
