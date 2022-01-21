@@ -111,6 +111,16 @@ FROM   world
 WHERE  NAME LIKE '%o__o%'
 ```
 
+10. Cuba and Togo have four characters names.
+
+    **Find the countries that have exactly four characters.**
+
+```sql
+SELECT NAME
+FROM   world
+WHERE  Length(NAME) = 4
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
