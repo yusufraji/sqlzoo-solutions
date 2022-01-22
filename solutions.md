@@ -153,6 +153,20 @@ FROM   world
 WHERE  capital LIKE Concat('%', NAME, '%')
 ```
 
+14. **Find the capital and the name where the capital is an extension of name of
+    the country.**
+
+    You should include **Mexico City** as it is longer than **Mexico**. You
+    should not include **Luxembourg** as the capital is the same as the country.
+
+```sql
+SELECT capital,
+       NAME
+FROM   world
+WHERE  capital LIKE Concat('%', NAME, '%')
+       AND Length(capital) > Length(NAME)
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
