@@ -167,6 +167,18 @@ WHERE  capital LIKE Concat('%', NAME, '%')
        AND Length(capital) > Length(NAME)
 ```
 
+15. For **Monaco-Ville** the name is **Monaco** and the extension is **-Ville**.
+
+    **Show the name and the extension where the capital is an extension of name
+    of the country.**
+
+```sql
+SELECT NAME,
+       Replace(capital, NAME, '') ext
+FROM   world
+WHERE  capital LIKE Concat(NAME, '_%')
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
