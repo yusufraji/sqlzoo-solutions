@@ -3,6 +3,7 @@ Here are my solutions to SQL tutorials from
 [SQLZoo](https://sqlzoo.net/wiki/SQL_Tutorial)
 
 ## Sections
+0. [SELECT basics](#select-basics) - Some simple queries to get you started
 1. [SELECT name](#selct-name) - Some pattern matching queries
 2. [SELECT from World](#select-from-world) - In which we query the World country profile table.
 3. [SELECT from Nobel](#select-from-nobel) - Additional practice of the basic features using a table of Nobel Prize winners.
@@ -13,6 +14,18 @@ Here are my solutions to SQL tutorials from
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
+## SELECT basics
+1. The example uses a WHERE clause to show the population of 'France'. Note that
+   strings (pieces of text that are data) should be in 'single quotes';
+
+   **Modify it to show the population of Germany**
+
+```sql
+SELECT population
+FROM   world
+WHERE  NAME = 'Germany'
+```
+
 ## SELECT name
 1. You can use `WHERE name LIKE 'B%'` to find the countries that start with "B".
 
