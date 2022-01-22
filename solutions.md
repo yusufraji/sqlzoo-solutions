@@ -143,6 +143,16 @@ FROM   world
 WHERE  capital = Concat(NAME, ' City')
 ```
 
+13. **Find the capital and the name where the capital includes the name of the
+    country.**
+
+```sql
+SELECT capital,
+       NAME
+FROM   world
+WHERE  capital LIKE Concat('%', NAME, '%')
+```
+
 ## SELECT from World
 
 1. Observe the result of running this SQL command to show the name, continent and population of all countries.
