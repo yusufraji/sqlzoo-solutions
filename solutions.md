@@ -12,6 +12,7 @@ Here are my solutions to SQL tutorials from
 6. [JOIN](#join) - In which we join two tables; game and goals.
 7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
 8. [using NULL](#using-null) - In which we look at teachers in departments.
+8+. [Numeric Examples](#numeric-examples) - In which we look at a survey and deal with some more complex calculations.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
 ## SELECT basics
@@ -1082,6 +1083,24 @@ SELECT teacher.NAME,
            ELSE 'None'
          END )
 FROM   teacher
+```
+
+## Numeric Examples
+
+1. The example shows the number who responded for:
+
+    * question 1
+    * at 'Edinburgh Napier University'
+    * studying '(8) Computer Science'
+
+   **Show the the percentage who STRONGLY AGREE**
+
+```sql
+SELECT a_strongly_agree
+FROM   nss
+WHERE  question = 'Q01'
+       AND institution = 'Edinburgh Napier University'
+       AND subject = '(8) Computer Science'
 ```
 
 ## Self join
