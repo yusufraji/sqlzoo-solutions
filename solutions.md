@@ -1113,6 +1113,18 @@ WHERE  question = 'Q15'
        AND score >= 100
 ```
 
+3. **Show the institution and score where the score for '(8) Computer Science'
+   is less than 50 for question 'Q15'**
+
+```sql
+SELECT institution,
+       score
+FROM   nss
+WHERE  question = 'Q15'
+       AND score < 50
+       AND subject = '(8) Computer Science'
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
