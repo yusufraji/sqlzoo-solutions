@@ -1103,6 +1103,16 @@ WHERE  question = 'Q01'
        AND subject = '(8) Computer Science'
 ```
 
+2. **Show the institution and subject where the score is at least 100 for question 15.**
+
+```sql
+SELECT institution,
+       subject
+FROM   nss
+WHERE  question = 'Q15'
+       AND score >= 100
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
