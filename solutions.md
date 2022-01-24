@@ -1182,6 +1182,21 @@ WHERE  question = 'Q22'
 GROUP  BY institution
 ```
 
+8. **Show the institution, the total sample size and the number of computing
+   students for institutions in Manchester for 'Q01'.**
+
+```sql
+SELECT institution,
+       Sum(sample),
+       Sum(CASE
+             WHEN subject = '(8) Computer Science' THEN sample
+           END) computing_students
+FROM   nss
+WHERE  question = 'Q01'
+       AND ( institution LIKE '%Manchester%' )
+GROUP  BY institution
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
