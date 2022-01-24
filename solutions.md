@@ -1151,6 +1151,21 @@ WHERE  question = 'Q22'
 GROUP  BY subject
 ```
 
+6. **Show the percentage of students who A_STRONGLY_AGREE to question 22 for the
+   subject '(8) Computer Science' show the same figure for the subject '(H)
+   Creative Arts and Design'.** 
+
+    Use the **ROUND** function to show the percentage without decimal places. 
+
+```sql
+SELECT subject,
+       Round(Sum(response * a_strongly_agree) / Sum(response), 0)
+FROM   nss
+WHERE  question = 'Q22'
+       AND subject IN ( '(8) Computer Science', '(H) Creative Arts and Design' )
+GROUP  BY subject
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
