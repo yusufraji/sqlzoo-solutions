@@ -1166,6 +1166,22 @@ WHERE  question = 'Q22'
 GROUP  BY subject
 ```
 
+7. **Show the average scores for question 'Q22' for each institution that include
+   'Manchester' in the name.**
+
+    The column **score** is a percentage - you must use the method outlined above to
+    multiply the percentage by the **response** and divide by the total response.
+    Give your answer rounded to the nearest whole number.
+
+```sql
+SELECT institution,
+       Round(Sum(response * score) / Sum(response), 0) score
+FROM   nss
+WHERE  question = 'Q22'
+       AND ( institution LIKE '%Manchester%' )
+GROUP  BY institution
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
