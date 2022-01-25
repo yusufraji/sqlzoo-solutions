@@ -1231,6 +1231,26 @@ WHERE  constituency = 'S14000024'
 ORDER  BY party
 ```
 
+3. The 2015 election is a different PARTITION to the 2017 election. We only care
+   about the order of votes for each year. 
+
+   **Use PARTITION to show the ranking of each party in S14000021 in each year.
+   Include yr, party, votes and ranking (the party with the most votes is 1).**
+
+```sql
+SELECT yr,
+       party,
+       votes,
+       Rank()
+         OVER (
+           partition BY yr
+           ORDER BY votes DESC) AS posn
+FROM   ge
+WHERE  constituency = 'S14000021'
+ORDER  BY party,
+          yr
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
