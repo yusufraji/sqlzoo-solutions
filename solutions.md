@@ -10,9 +10,10 @@ Here are my solutions to SQL tutorials from
 4. [SELECT within SELECT](#select-within-select) - In which we form queries using other queries. 
 5. [SUM and COUNT](#sum-and-count) - In which we apply aggregate functions.
 6. [JOIN](#join) - In which we join two tables; game and goals.
-7. [More JOIN operations](#more-join) - In which we join two tables; game and goals.
+7. [More JOIN operations](#more-join) - In which we join actors to movies in the Movie Database.
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 8+. [Numeric Examples](#numeric-examples) - In which we look at a survey and deal with some more complex calculations.
+9-. [Window function](#window-function) - In which we examine UK general election results.
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
 ## SELECT basics
@@ -1195,6 +1196,20 @@ FROM   nss
 WHERE  question = 'Q01'
        AND ( institution LIKE '%Manchester%' )
 GROUP  BY institution
+```
+
+## Window function
+
+1.  Show the **lastName**, **party** and **votes** for the **constituency** 'S14000024' in 2017.
+
+```sql
+SELECT lastname,
+       party,
+       votes
+FROM   ge
+WHERE  constituency = 'S14000024'
+       AND yr = 2017
+ORDER  BY votes DESC
 ```
 
 ## Self join
