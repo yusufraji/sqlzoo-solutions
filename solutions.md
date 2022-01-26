@@ -1251,6 +1251,28 @@ ORDER  BY party,
           yr
 ```
 
+4. Edinburgh constituencies are numbered S14000021 to S14000026.
+   
+   ***Use PARTITION BY constituency to show the ranking of each party in Edinburgh
+   in 2017. Order your results so the winners are shown first, then ordered by
+   constituency.** 
+
+```sql
+SELECT constituency,
+       party,
+       votes,
+       Rank()
+         OVER (
+           partition BY constituency
+           ORDER BY votes DESC) AS posn
+FROM   ge
+WHERE  constituency BETWEEN 'S14000021' AND 'S14000026'
+       AND yr = 2017
+ORDER  BY posn,
+          constituency,
+          votes DESC
+```
+
 ## Self join
 
 1. How many **stops** are in the database.
