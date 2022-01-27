@@ -14,6 +14,7 @@ Here are my solutions to SQL tutorials from
 8. [using NULL](#using-null) - In which we look at teachers in departments.
 8+. [Numeric Examples](#numeric-examples) - In which we look at a survey and deal with some more complex calculations.
 9-. [Window function](#window-function) - In which we examine UK general election results.
+9+. [COVID 19](#covid-19) - In which we measure the impact of COVID 19
 9. [Self join](#self-join) - In which we join Edinburgh bus routes to Edinburgh bus routes.
     
 ## SELECT basics
@@ -1311,6 +1312,25 @@ FROM   (SELECT constituency,
                AND yr = 2017) AS ed
 WHERE  posn = 1
 GROUP  BY party
+```
+
+## COVID 19
+
+1. The example uses a WHERE clause to show the cases in 'Italy' in March 2020.
+
+   **Modify the query to show data from Spain**
+
+```sql
+SELECT NAME,
+       Day(whn),
+       confirmed,
+       deaths,
+       recovered
+FROM   covid
+WHERE  NAME = 'Spain'
+       AND Month(whn) = 3
+       AND Year(whn) = 2020
+ORDER  BY whn
 ```
 
 ## Self join
